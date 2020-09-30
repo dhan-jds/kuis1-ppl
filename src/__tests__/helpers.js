@@ -12,6 +12,10 @@ test('2 - 1 = 1', () => {
     expect(functions.decrementQty(2)).toBe(1);
 });
 
-test('50000 x 2 = 100000', () => {
+test('50000 * 2 = 100000', () => {
     expect(functions.total(50000, 2)).toBe(100000);
+});
+
+test('200000 - 50000 * 3 = 50000', () => {
+    expect(functions.byr(200000, 50000, 3)).toBe(50000);
 });
