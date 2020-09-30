@@ -16,6 +16,10 @@ incrButton.addEventListener('click', () => {
 });
 
 decrButton.addEventListener('click', () => {
-  qtyInput.value = decrementQty(qtyInput.value);
+  if (qtyInput.value < 2) {
+    qtyInput.value = 1;
+  } else {
+    qtyInput.value = decrementQty(qtyInput.value);
+  }
   subtotal.textContent = `Rp. ${total(price.value, qtyInput.value)}`;
 });
